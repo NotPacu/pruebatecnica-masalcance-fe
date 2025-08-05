@@ -1,0 +1,39 @@
+.edit-log-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.form-row label {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: #333;
+}
+
+.form-row input[pInputText] {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-row input[pInputText][disabled] {
+  background: #f3f4f6;
+  color: #888;
+}
+
+:host ::ng-deep .p-calendar {
+  z-index: 9999 !important;
+}
+:host ::ng-deep .p-datepicker {
+  z-index: 9999 !important;
+}

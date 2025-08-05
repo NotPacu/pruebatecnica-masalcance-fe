@@ -1,0 +1,25 @@
+<form class="edit-log-form" *ngIf="selectedLog">
+  <div class="form-row">
+    <label for="id">Id</label>
+    <input id="id" name="id" type="text" pInputText disabled [(ngModel)]="selectedLog.id" />
+  </div>
+  <div class="form-row">
+    <label for="query_type">Tipo de consulta</label>
+    <input id="query_type" name="query_type" type="text" pInputText [(ngModel)]="selectedLog.query_type" />
+  </div>
+  <div class="form-row">
+    <label for="route">Ruta</label>
+    <input id="route" name="route" type="text" pInputText [(ngModel)]="selectedLog.route" />
+  </div>
+  <div class="form-row">
+    <label for="status_code">Código de estado</label>
+    <input id="status_code" name="status_code" type="text" pInputText [(ngModel)]="selectedLog.status_code" />
+  </div>
+  <div class="form-row" *ngIf="selectedLog">
+    <label for="query_date">Fecha</label>
+    <p-calendar appendTo="body" id="query_date" name="query_date" [(ngModel)]="selectedLog.query_date" dateFormat="yy-mm-dd' 'HH" [showTime]="true" [showIcon]="true"></p-calendar>
+  </div>
+  <div class="form-row" style="text-align:center; margin-top:2rem;">
+    <p-button label="Guardar" icon="pi pi-save" styleClass="p-button-success" (onClick)="onSave()"></p-button>
+  </div>
+</form>

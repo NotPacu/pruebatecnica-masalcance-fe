@@ -1,0 +1,24 @@
+<p-table [value]="users" [paginator]="true" [rows]="15" [rowsPerPageOptions]="[5, 10, 15, 20, 50]">
+  [responsiveLayout]="'scroll'">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Usuario</th>
+      <th>Email</th>
+      <th>Celular</th>
+      <th>Ver Posts</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-user>
+    <tr>
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.username}}</td>
+
+      <td>{{user.email}}</td>
+      <td>{{user.phone}}</td>
+      <td><p-button label="Posts" (onClick)="openPostsModal(user.id)"></p-button> </td>
+    </tr>
+  </ng-template>
+</p-table>

@@ -1,0 +1,30 @@
+<p-dropdown 
+  [options]="userOptions" 
+  [(ngModel)]="selectedUserId" 
+  optionLabel="name"
+  optionValue="code"
+  placeholder="Filtrar por usuario"
+  (onChange)="onUserChange()"
+></p-dropdown>
+<input id="route" name="route" type="text" pInputText (ngModelChange)="onUserChange()" [(ngModel)]="selectedUserId" />
+
+<p-table [value]="filteredAlbums" [paginator]="true" [rows]="5" [rowsPerPageOptions]="[5, 10, 15, 20, 50]"
+  [responsiveLayout]="'scroll'" [loading]="loading">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Id</th>
+      <th>Id de Usuario</th>
+      <th>Título</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-album>
+    <tr>
+      <td>{{album.id}}</td>
+      <td>{{album.userId}}</td>
+      <td>{{album.title}}</td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="loadingBody">
+  </ng-template>
+</p-table>
+<p-toast></p-toast>

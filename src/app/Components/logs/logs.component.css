@@ -1,0 +1,27 @@
+*{
+  font-weight: 600;
+}
+
+.status-success {
+  border-radius: 5px;
+  padding: 2px;
+  border: 2px solid rgb(61, 178, 3);
+}
+
+.status-client-error {
+  border-radius: 5px;
+  padding: 2px;
+  border: 2px solid red;
+}
+
+.status-server-error {
+  border-radius: 5px;
+  padding: 2px;
+  border: 2px solid orange;
+}
+
+.status-unknown {
+  border-radius: 5px;
+  padding: 2px;
+  border: 2px solid gray;
+}

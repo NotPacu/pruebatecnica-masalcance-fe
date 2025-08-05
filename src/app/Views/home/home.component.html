@@ -1,0 +1,17 @@
+
+<p-card [ngStyle]="{ 'margin-bottom': '2rem', 'text-align': 'center' }">
+    <h2 style="margin-top:0;">Bienvenido al Panel de Administracion</h2>
+    <p>Utiliza las pestañas para navegar entre usuarios y el registro de peticiones.</p>
+</p-card>
+
+<p-tabView>
+    <p-tabPanel header="Usuarios">
+        <app-users></app-users>
+    </p-tabPanel>
+    <p-tabPanel header="Albumes">
+        <app-album></app-album>
+    </p-tabPanel>
+    <p-tabPanel header="Registro de peticiones">
+        <app-logs></app-logs>
+    </p-tabPanel>
+</p-tabView>
